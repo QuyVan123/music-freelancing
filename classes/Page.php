@@ -113,8 +113,6 @@ abstract class Page
 		{
 			$this->echoNonUserNav();
 		}
-		
-		
 	}
 	
 	protected function publicNav()
