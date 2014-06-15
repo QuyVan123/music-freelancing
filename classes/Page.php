@@ -115,6 +115,7 @@ abstract class Page
 		}
 	}
 	
+	
 	protected function publicNav()
 	{
 		$this->create_menu_link(INDEX_URL,"Index");
