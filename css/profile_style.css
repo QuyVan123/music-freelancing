@@ -1,0 +1,59 @@
+#profilePicSpace
+{
+	float:left;
+	display:inline;
+	background:#C9D0D0;
+	padding: 5px;
+	margin:0;
+	border:1px solid #ccc;
+	border-radius: 10px ;
+}
+#profilePicSpace img
+{
+	width:150px;
+	height:150px;
+	
+}
+
+#profilePicIcon img
+{
+	width:20px;
+	height:20px;
+}
+
+#display_profile_name
+{
+	margin:0 10px 0 10px;
+	display:inline;
+	float:left;
+	
+}
+
+/*is there a better way to do this?*/
+#edit_chat_button
+{
+	
+}
+
+#edit_chat_button_area
+{
+
+}
+
+#userFiles
+{
+	float:left;
+	clear:left;
+}
+
+#user_info
+{
+	display:block;
+	float:left;
+	clear:left;
+}
+
+#view_my_profile_button a
+{
+	color:black;
+}
