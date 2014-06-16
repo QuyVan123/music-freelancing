@@ -1,7 +1,11 @@
 <?php
 require_once('config.php');
 
-$page = new chatPage();
+if (!isset($_GET['username']))
+{
+	header('Location: ' . INDEX_URL);
+	die();
+}
+$page = new chatPage($_GET['username']);
 $page->display();
-
 ?>

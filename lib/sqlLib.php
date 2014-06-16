@@ -1,5 +1,41 @@
 <?php
 
+function getChatContacts($user)
+{
+	$con=dbConnect();
+	
+	$query = "SELECT * FROM " . CHAT_TABLE_NAME . " WHERE SENDER='" . $user . "' OR RECEIVER='" . $user . "' ORDER BY DATE ASC" ;
+	
+	$result = $con->prepare($query);
+	$result->execute();
+	return $result;
+
+}
+function getChatMessages($user1, $user2)
+{
+	$con=dbConnect();
+	
+	$query = "SELECT * FROM " . CHAT_TABLE_NAME . " WHERE (SENDER='" . $user1 . "' AND RECEIVER='" . $user2 . 
+	"') OR (SENDER='" . $user2 . "' AND RECEIVER ='" . $user1 
+	. "') ORDER BY DATE ASC"; 
+	
+	$result = $con->prepare($query);
+	$result->execute();
+	return $result;
+}
+
+function insertChatMessage($user1, $user2, $message)
+{
+	$con=dbConnect();
+	$query = "INSERT INTO " . CHAT_TABLE_NAME . " (Sender, Receiver, Date, Message)
+VALUES ('" .$user1 . "', '" . $user2 . "', NOW(), '" . $message . "' )";
+	
+	$result = $con->prepare($query);
+	$result->execute();
+	return $result;
+}
+
+
 function queryUserTags($username)
 {
 	$con=dbConnect();

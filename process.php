@@ -137,6 +137,20 @@ function uploadFile()
 	}
 }
 
+function uploadMessage()
+{
+	require_once(SQL_LIB_URL);
+	if (insertChatMessage($_POST['user'], $_POST['selectedUser'],$_POST['message']) != false)
+	{
+		$msg = new SuccessMessage("Sent Message");
+		$msg->addMessageAndRedirect(CHAT_URL . "?username=" . $_POST['selectedUser']);
+	}
+	else
+	{
+		echo "failed to send message."; die();
+	}
+}
+
 function processHandler()
 {
 	$action=actionHandler();
@@ -164,7 +178,7 @@ function processHandler()
 
 	elseif ($action=='message')
 	{
-		processMessage();
+		uploadMessage();
 	}
 
 	elseif($action=='editTags')

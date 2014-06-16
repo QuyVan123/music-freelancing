@@ -4,7 +4,7 @@ class ViewProfilePage extends ProfilePage
 	protected $selectedUser;
 	function __construct($username)
 	{
-		parent::__construct();
+		parent::__construct(null);
 		
 		$tempUser= new User();
 		$tempUser->fillData($username);
