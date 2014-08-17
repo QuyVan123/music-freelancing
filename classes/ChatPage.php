@@ -24,8 +24,12 @@ class ChatPage extends Page
 	
 	function echoChatArea()
 	{
+		echo '
+			<div id="chatArea">';
 		$this->loadChatMessages();
 		$this->echoInputArea();
+		echo '
+			</div>';
 	}
 	
 	function loadChatMessages()
@@ -49,15 +53,12 @@ class ChatPage extends Page
 		if ($row['sender']==$this->user->get('username')) // if its a sent message
 		{
 			echo '
-			<td><b>' . $row['sender'] . '</b>:</td>
-			<td>' . $row['message'] . '</td>
-			<td></td><td></td>';
+			<td><b>' . $row['sender'] . '</b>:' . $row['message'] . '</td>';
 		}
 		else // if its a received message
 		{
-			echo '<td></td><td></td>
-			<td><b>' . $row['sender'] . '</b>:</td>
-			<td>' . $row['message'] . '</td>';
+			echo '<td></td>
+			<td><b>' . $row['sender'] . '</b>:' . $row['message'] . '</td>';
 		}
 		
 		echo "
@@ -68,7 +69,7 @@ class ChatPage extends Page
 		echo '
 		<form method ="post" action = ' . PROCESS_URL .  '>
 			<input type="hidden" name="act" value="message" />
-			<input type="text" name="message" >
+			<input type="text" name="message" required autofocus >
 			<input type="submit" value="Submit">
 			<input type="hidden" name="selectedUser" value="' . $this->selectedUser->get('username') . '" />
 			<input type="hidden" name="user" value="' . $this->user->get('username') . '" />

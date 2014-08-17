@@ -44,7 +44,9 @@ if ($_SERVER['HTTP_HOST']=="localhost")
 	define ('KEYWORDS_STYLE_URL',BASE_URL . 'css/keywords_style.css');
 	define ('MISC_STYLE_URL', BASE_URL . 'css/misc_style.css');
 	define ('PROFILE_STYLE_URL', BASE_URL . 'css/profile_style.css');
-	$CSS_URLS_ARRAY=array(PAGE_STYLE_URL, MESSAGE_STYLE_URL, KEYWORDS_STYLE_URL, MISC_STYLE_URL);
+	define ('FORM_STYLE_URL', BASE_URL . 'css/form_style.css');
+	define ('CHAT_STYLE_URL', BASE_URL . 'css/chat_style.css');
+	$CSS_URLS_ARRAY=array(PAGE_STYLE_URL, MESSAGE_STYLE_URL, KEYWORDS_STYLE_URL, MISC_STYLE_URL, FORM_STYLE_URL, CHAT_STYLE_URL);
 	
 	//libs
 	define ('EXTERNAL_PAGE_FILE_LIB_URL',BASE_URL . 'lib/externalPageFileLib.php');

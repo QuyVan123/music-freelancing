@@ -17,7 +17,7 @@ class RegisterForm extends Form implements FormInterface
 	static function echo_form_header()
 	{
 		echo "
-		<form method='post' action='" . PROCESS_URL . "'>
+		<form class='colourCoded' method='post' action='" . PROCESS_URL . "'>
 		<input type='hidden' name='act' value='register' />
 			<table>";
 	}
@@ -26,11 +26,11 @@ class RegisterForm extends Form implements FormInterface
 	{
 		echo "
 				<table>";
-		Form::echoFormTextField('firstName');
-		Form::echoFormTextField('lastName');
-		Form::echoFormTextField('username');
-		Form::echoFormTextField('email');
-		Form::echoFormTextField('password');
+		Form::echoFormTextField('firstName', 'required', 'autofocus');
+		Form::echoFormTextField('lastName', 'required', '');
+		Form::echoFormTextField('username', 'required', '');
+		Form::echoFormEmailField('email', 'required', '');
+		Form::echoFormPasswordField('required', '');
 		echo "
 					<tr>
 						<td colspan='3'>

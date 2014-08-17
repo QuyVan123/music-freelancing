@@ -13,6 +13,14 @@ class RegisterPage extends Page
 	{
 		echo "<p>This is the " . $this->get('title') . " page </p>";
 		RegisterForm::echo_form();
+		RegisterPage::clearPrevValues();
+	}
+	function clearPrevValues()
+	{
+		unset($_SESSION['firstName']);
+		unset($_SESSION['lastName']);
+		unset($_SESSION['username']);
+		unset($_SESSION['email']);
 	}
 }
 

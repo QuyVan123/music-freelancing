@@ -1,0 +1,11 @@
+
+.colourCoded input:focus:valid
+{
+	border: 2px green solid;
+}
+
+.colourCoded input:focus:invalid
+{
+	border: 2px red solid;
+}
+

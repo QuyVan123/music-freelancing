@@ -116,7 +116,7 @@ class ViewProfilePage extends ProfilePage
 	
 	function echoFiles()
 	{
-		$path = $this->user->get('userFolder');
+		$path = $this->selectedUser->get('userFolder');
 
 		$dir_handle = @opendir($path);
 		

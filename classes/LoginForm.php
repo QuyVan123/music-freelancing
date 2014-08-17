@@ -14,7 +14,7 @@ class LoginForm extends Form implements FormInterface
 	static function echo_form_header()
 	{
 		echo "
-		<form method='post' action='" . PROCESS_URL . "'>
+		<form class='colourCoded' method='post' action='" . PROCESS_URL . "'>
 		<input type='hidden' name='act' value='login' />";
 	}
 	
@@ -22,8 +22,8 @@ class LoginForm extends Form implements FormInterface
 	{
 		echo "
 				<table>";
-		Form::echoFormTextField('username');
-		Form::echoFormTextField('password');
+		Form::echoFormTextField('username', 'required', 'autofocus');
+		Form::echoFormPasswordField('required', '');
 		echo "
 					<tr>
 						<td colspan='3'>

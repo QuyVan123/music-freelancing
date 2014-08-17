@@ -93,22 +93,13 @@ function registerCheckAndReturnLastName($value)
 
 function registerCheckAndReturnEmail($value)
 {
-	if (!filter_var($value, FILTER_VALIDATE_EMAIL))
-	{
-		$msg = new ErrorMEssage('Invalid Email Address');
-		$msg->addMessage();
-		return;
-	}
-	else if(userFieldInUse('email',$value))
+	if(userFieldInUse('email',$value))
 	{
 		$msg = new ErrorMEssage('Email Already Exists');
 		$msg->addMessage();
 		return;
 	}
-	else
-	{
-		return '';
-	}
+	return '';
 }
 
 function userFieldInUse($field,$value)

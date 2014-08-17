@@ -25,6 +25,11 @@ abstract class Message
 		header ("Location: " . $URL);
 		die();
 	}
+	function redirect($URL)
+	{
+		header ("Location: " . $URL);
+		die();
+	}
 	
 	function addMessage()
 	{

@@ -4,7 +4,7 @@ require_once('config.php');
 
 function processLogin()
 {
-	
+	$_SESSION['username'] = $_POST['username'];
 	$username = htmlspecialchars($_POST['username']);
 	$password = htmlspecialchars($_POST['password']);
 	$user = new User();
@@ -14,6 +14,10 @@ function processLogin()
 
 function processRegister()
 {
+	$_SESSION['firstName'] = $_POST['firstName'];
+	$_SESSION['lastName'] = $_POST['lastName'];
+	$_SESSION['username'] = $_POST['username'];
+	$_SESSION['email'] = $_POST['email'];
 	$firstName = htmlspecialchars($_POST['firstName']);
 	$lastName = htmlspecialchars($_POST['lastName']);
 	$username = htmlspecialchars($_POST['username']);

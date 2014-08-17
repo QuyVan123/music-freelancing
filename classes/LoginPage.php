@@ -15,6 +15,11 @@ class LoginPage extends Page
 		<p>This is the " . $this->get('title') . " page </p>";
 		
 		LoginForm::echo_form();
+		loginPage::clearPrevValues();
+	}
+	function clearPrevValues()
+	{
+		unset($_SESSION['username']);
 	}
 }
 

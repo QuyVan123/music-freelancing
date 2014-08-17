@@ -65,25 +65,17 @@ class User
 	
 	public function login($username, $password)
 	{
-		if ($this->loginValidInputs($username,$password))
+		$result = loginQuery($username,$password);
+		if ($this->processLoginResult($result))
 		{
-			$result = loginQuery($username,$password);
-			if ($this->processLoginResult($result))
-			{
-				$this->fillData($username);
-				$_SESSION['user'] = serialize($this);		
-				header ("Location: " . INDEX_URL);
-				die();
-			}
-			else
-			{
-				$msg = new ErrorMessage('Log in failed');
-				$msg->addMessageAndRedirect(LOGIN_URL);
-			}
+			$this->fillData($username);
+			$_SESSION['user'] = serialize($this);		
+			header ("Location: " . INDEX_URL);
+			die();
 		}
 		else
 		{
-			$msg = new ErrorMessage('Invalid Inputs for log in.');
+			$msg = new ErrorMessage('Log in failed');
 			$msg->addMessageAndRedirect(LOGIN_URL);
 		}
 	}
@@ -112,9 +104,10 @@ class User
 		else
 		{
 			$msg = new ErrorMessage('Register inputs invalid');
-			$msg->addMessageAndRedirect(REGISTER_URL);
+			$msg->redirect(REGISTER_URL);
 		}
 	}
+
 	
 	function insertIntoTagTable()
 	{
@@ -169,18 +162,6 @@ class User
 			
 		}
 	}
-	
-	private function loginValidInputs($username,$password)
-	{
-		checkAndAddFieldError('login', 'username', $username, $errors);
-		checkAndAddFieldError('login', 'password', $password, $errors);
-		if (empty($_SESSION['message'])) 
-		{
-			return true;
-		}
-		
-	}
-	
 	private function registerValidInputs($first_name, $last_name, $username, $email, $password)
 	{
 		checkAndAddFieldError('register', 'first_name', $first_name, $errors);
@@ -188,6 +169,17 @@ class User
 		checkAndAddFieldError('register', 'username', $username, $errors);
 		checkAndAddFieldError('register', 'email', $email, $errors);
 		checkAndAddFieldError('register', 'password', $password, $errors);
+		if (empty($_SESSION['message'])) 
+		{
+			return true;
+		}
+		
+	}
+	//currently not used
+	private function loginValidInputs($username,$password)
+	{
+		checkAndAddFieldError('login', 'username', $username, $errors);
+		checkAndAddFieldError('login', 'password', $password, $errors);
 		if (empty($_SESSION['message'])) 
 		{
 			return true;

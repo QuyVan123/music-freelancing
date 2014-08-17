@@ -1,0 +1,12 @@
+#chatDisplayTable
+{
+	border: 1px gray solid;
+	width: 100%;
+	table-layout:fixed;
+}
+
+#chatArea
+{
+	border:5px gray solid;
+	width:100%;
+}

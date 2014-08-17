@@ -1,6 +1,6 @@
 <?php
 require_once('../config.php');
-define ('FIRST_CONFIG_URL', 'first_config.php');
+
 
 function get_con_mysqli()
 {
