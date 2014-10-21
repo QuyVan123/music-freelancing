@@ -1,0 +1,20 @@
+Error 1 - db_query_lib - failed to conntect to server
+Error 2 - display_chat.php - username not in $_GET
+Error 3 - input_validation.php - not a valid field... someone attempting to infiltrate server probably
+Error 4 - display_chat.php - most likely, user does not exist
+Error 6 - view_files.php - folder does not exist
+Error 7 - display_chat.php - attempting to chat with self
+Error 8 - process.php - processing tags failed... most likely no tag input in sql
+Error 9 - process.php - failed to create folder
+Error 10 - process.php - folder already exists
+Error 11 - process.php - multiple pw/username combo
+Error 12 - chat_lib.php - chat list failed to display
+Error 13 - input_validation_lib.php - incorrect field
+Error 14 - process.php - check the code... refer to http://www.php.net/manual/en/features.file-upload.errors.php for error codes
+
+
+
+
+$finfo = finfo_open(FILEINFO_MIME_TYPE);
+echo finfo_file($finfo, $path.$file);
+finfo_close($finfo);

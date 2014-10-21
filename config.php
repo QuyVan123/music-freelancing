@@ -34,7 +34,7 @@ if ($_SERVER['HTTP_HOST']=="localhost")
 	define ('USER_NAME', 'root');
 	define ('PASSWORD', '');
 	define('BASE_URL','./'); // not absolute path
-	define('PRIVATE_URL','localhost/web_developing/private/');
+	// define('PRIVATE_URL','localhost/web_developing/private/');
 	define ('UPLOAD_URL',BASE_URL. 'upload/');
 	
 	

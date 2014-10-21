@@ -1,0 +1,153 @@
+body
+{
+	padding: 0;
+	background: linear-gradient(to bottom, #FFFFFF 0%, #00A3EF 600%) no-repeat;
+	font-family: arial;
+	/*min-height:1000px;*/
+}
+
+#page
+{
+	width:1200px; /* width of whole page*/
+	margin: 0 auto;
+	background-color:grey;
+	padding:20px;
+	border: 1px solid #999;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.titleHeader {
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+h1
+{
+ margin: 0;
+ font-size: 40pt;
+ color: #820;
+}
+
+#menu
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 42px;
+	width: 100%;
+	display: block;
+}
+
+#menu li
+{
+	float: left;
+}
+
+a
+{
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover
+{
+	color: #888;
+}
+
+#menu a
+{
+	display: block;
+	text-align:center;
+	width:100px; /*adjust lgenth of menu box*/
+	padding: 10px;
+	color: #000;
+	font-size: 8px;
+	text-decoration: none;
+	border: 1px solid #bbb;
+	background-color: #ccc;
+}
+#menu a:hover
+{
+	background-color: #fff;
+}
+
+
+#footer
+{
+	padding: 2px;
+	border-style:solid;
+	border-color:black;
+	background-color:grey;
+	padding-left:10px;
+	display:block;
+
+}
+
+div tr td 
+{
+	width: 150px;
+}
+.one
+{
+	border-style:solid;
+	border-color:black;
+}
+.two
+{
+	border-style:solid;
+	border-color:black;
+}
+
+.error
+{
+  color:red;
+}
+
+.infoMessage, .successMessage, .warningMessage, .errorMessage{
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.infoMessage {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('../images/info.png');
+}
+
+.successMessage {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image:url('../images/success.png');
+}
+
+.warningMessage {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('../images/warning.png');
+}
+
+.errorMessage {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('../images/error.png');
+}
+
+#profile_pic
+{
+	width:100px;
+	height:100px;
+}
+
+#land_img
+{
+	height:650px;
+	width:1200px;
+}

@@ -1,0 +1,266 @@
+
+/*
+
+
+NICE BLUE ->00A3EF
+
+NICE GREEN -> 6DF57F 
+BORDER GREEN -> 2AE442
+Solid block on top for navigation
+Solid block on bottom for extra/support navigation
+Link/Header of website name on top left beside navigation
+Lots of white on page-->keep it clean andsimple
+
+normal text colour -> black
+
+
+slideshow of inspiring messages....and a learn more button
+video?
+
+login topright
+
+.==class
+#==id
+
+http://colorschemedesigner.com/#3o11Tw0w0w0w0
+
+*/
+
+/*formatting for the whole page....*/
+body
+{
+	font-family: arial;
+	margin:0;
+	/*border-color:black;
+	border-width:10px;
+	border-style:solid;*/
+}
+
+/*underneath body...wierd???*/
+#page
+{
+
+
+}
+
+/*top section of page*/
+#header
+{
+	background-color:#00A3EF;
+	/*background-image: radial-gradient(ellipse farthest-side at right top, #FFFFFF 0%, #00A3EF 100%);*/
+	padding:20px;
+	margin:0px;
+	height:47px;
+	display:block;
+}
+
+/*title header section (for website name)*/
+/*manual places the text, does not use the class inside to put in frame */
+/* is a link currently*/
+#titleHeader
+{
+	padding: 0;
+	padding-left:40px;
+	display: block;
+	text-align: center;
+	float:left;
+	margin: 0;
+	/*margin-bottom: 20px;*/
+	text-decoration: none;
+	color:white;
+	font-size: 30pt;
+	font-weight:bold;
+}
+
+
+/*login/register section in header */
+#login_register
+{
+	list-style-type: none;
+	float:right;
+}
+
+/*list item in login/register section */
+#login_register li
+{
+	float:right;
+	padding:0px 5px 0px 0px;
+}
+
+/*link in list item in login/register section */
+#login_register  a
+{
+	display: inline;
+	text-align:right;
+	width:100px; /*adjust lgenth of menu box*/
+	font-size: 20px;
+	font-weight:bold;
+	color:white;
+	text-decoration: none;
+}
+
+/*specific to the register button*/
+li #accent_item_in_login_register
+{
+	background-color:white;
+	color:#00A3EF;
+	padding:0px 10px;
+	border-radius: 10px ;
+}
+
+
+
+/*navigation menu section*/
+#menu
+{
+	list-style-type: none;
+	padding: 11px 0px 11px 0px;
+	margin:0;
+	margin-top:-11px;
+	float:left;
+	background-color:#39AECF;
+	width:1140px;
+	/*text-align:center;*/
+	border:solid;
+	border-width:4px;
+	border-color:#057D9F;
+	border-radius: 10px ;
+}
+/*list item in navigation menu section*/
+#menu li
+{
+	display:inline;
+	
+}
+
+/*link in list item in navigation menu section*/
+#menu li a
+{
+	
+	display: inline;
+	text-align:center;
+	padding: 16px 10px 15px 10px;
+	color: white;
+	font-weight:bold;
+	font-size: 15px;
+	text-decoration: none;
+	/*border: 1px solid #bbb;*/ /*must adjust padding... between 15px and 16px for bottom*/
+}
+
+/*the current active link in list item in navigation menu*/
+#menu li a.active
+{
+	/*background-color:#FFA040;*/
+	/*color:#FFA040;*/
+	
+}
+
+/*hovering link in list item in navigation menu section*/
+#menu li a:hover
+{
+	/*background-color: white;*/
+	/*color:#FFA040;*/
+	text-decoration:underline;
+}
+
+
+/*content of the function "print_body"*/
+#main_stuff
+{
+	clear:left;
+	float:left;
+}
+
+/*footer section of page*/
+#footer
+{
+	float:left;
+	display:block;
+	background-color:#6EC6DF;
+	width:100%;
+}
+
+/*class used to put content in the inside frame*/
+.inside
+{
+
+	margin-left:60px;
+	margin-right:60px;
+}
+
+/*landing page, image size*/
+#land_img
+{
+	height:650px;
+	width:1140px;
+}
+
+.user_sort_button a
+{
+	text-decoration: none;
+	color:black;
+}
+
+h1
+{
+	color:black;
+}
+
+h2
+{
+	color:black;
+}
+
+
+.tags
+{
+	background-color:#C9D0D0;
+	display:inline;
+	margin: 0 5px 0 5px;
+	padding: 1px 2px 1px 2px;
+}
+
+.header_body_footer_spacer
+{
+	display:block;
+	margin:10px 0;
+}
+
+
+.infoMessage, .successMessage, .warningMessage, .errorMessage
+{
+  border: 1px solid;
+  display:block;
+  width:1130px;
+  padding: 15px 0px 15px 15px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.infoMessage 
+{
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('../images/info.png');
+}
+
+.successMessage 
+{
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image:url('../images/success.png');
+}
+
+.warningMessage 
+{
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('../images/warning.png');
+}
+
+.errorMessage 
+{
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('../images/error.png');
+}

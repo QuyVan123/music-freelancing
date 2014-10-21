@@ -1,0 +1,124 @@
+
+/*applies border-box to everthing*/
+* 
+{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*formatting for the whole page....*/
+body
+{
+	background-color:red;
+	margin:0;
+}
+
+/*this is where stuff actually goes on the page*/
+#page
+{
+
+	margin-left:60px;
+	margin-right:60px;
+	background-color:green;
+	/*box-shadow: 0px 0px 4px 0px #ffffff;*/
+	overflow: auto;
+	width: 100% - 60px;
+}
+
+/*top section of page*/
+#header
+{
+	padding-top:20px;
+	background-color:blue;
+	overflow: auto;
+	width: 100%;
+
+}
+
+/*title header section (for website name)*/
+/*manual places the text, does not use the class inside to put in frame */
+/* is a link currently*/
+#title_header
+{
+	float:left;
+	text-decoration: none;
+	color:#39AECF;
+	font-size: 30pt;
+	font-weight:bold;
+}
+
+/*login/register section in header */
+#login_register
+{
+	float:right;
+	list-style-type: none;
+}
+
+/*list item in login/register section */
+#login_register li
+{
+	float:right;
+	margin:0px 0px 0px 0px;
+}
+
+/*link in list item in login/register section */
+#login_register  a
+{
+	font-size: 20px;
+	font-weight:bold;
+	color:#39AECF;
+	text-decoration: none;
+	
+}
+
+#login_register  a:hover
+{
+	border-bottom:1px solid;
+}
+
+/*specific to the register button*/
+li #accent_item_in_login_register
+{
+	/*background-color:white;*/
+	/*color:#00A3EF;*/
+	/*margin:0px 10px;*/
+	//*font-style:italic;*/
+}
+
+/*navigation menu section*/
+#menu
+{
+	list-style-type: none;
+	margin:0px 0px 0px 0;
+	padding:0;
+	
+}
+
+/*list item in navigation menu section*/
+#menu li
+{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+/*link in list item in navigation menu section*/
+#menu li a
+{
+	font-weight:bold;
+	font-size: 15px;
+	text-decoration: none;
+	margin:0;
+	padding:0;
+}
+
+#main_stuff
+{
+	background-color:yellow;
+}
+
+#footer
+{
+	background-color:orange;
+}
